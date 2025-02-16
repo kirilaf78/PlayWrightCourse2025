@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('My manual PlayWright', async ({ page }) => {
+test('Recorded at cursor', async ({ page }) => {
   await test.step('Go to url', async () => {
     await page.goto('https://www.youtube.com/');
     await page
@@ -9,6 +9,7 @@ test('My manual PlayWright', async ({ page }) => {
   });
 
   await test.step('Search with keywords', async () => {
+    await page.getByRole('combobox', { name: 'Search' }).click();
     await page
       .getByRole('combobox', { name: 'Search' })
       .fill('Finland vs Sweden');
@@ -16,4 +17,7 @@ test('My manual PlayWright', async ({ page }) => {
   });
 
   await expect(page).toHaveTitle('Finland vs Sweden - YouTube');
+  await expect(
+    page.getByRole('link', { name: 'Watch NHL With VPN' })
+  ).toBeVisible();
 });
