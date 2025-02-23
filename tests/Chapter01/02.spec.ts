@@ -9,9 +9,8 @@ test('My manual PlayWright', async ({ page }) => {
   });
 
   await test.step('Search with keywords', async () => {
-    await page
-      .getByRole('combobox', { name: 'Search' })
-      .fill('Finland vs Sweden');
+    await page.getByRole('combobox', { name: 'Search' }).click()
+    await page.getByRole('combobox', { name: 'Search' }).fill('Finland vs Sweden');
     await page.getByRole('combobox', { name: 'Search' }).press('Enter');
   });
 
