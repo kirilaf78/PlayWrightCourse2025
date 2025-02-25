@@ -29,6 +29,7 @@ export default defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
     headless: false,
     screenshot: 'only-on-failure',
+    testIdAttribute: 'data-tab-item',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
