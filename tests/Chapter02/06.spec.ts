@@ -22,15 +22,27 @@ test('Mouse work', async ({ page }) => {
     //   })
     //   .click({ button: 'middle' });
     //Right click
-    await page
-      .locator('a')
-      .filter({
-        hasText: 'Trump says Japan, China cannot keep reducing currency value',
-      })
-      .click({ button: 'right' });
-
-      //Mouse hover
+    // await page
+    //   .locator('a')
+    //   .filter({
+    //     hasText: 'Trump says Japan, China cannot keep reducing currency value',
+    //   })
+    //   .click({ button: 'right' });
+    // Mouse hover
+   
+    //   await page
+    //     .locator('#ybar-navigation')
+    //     .getByRole('link', { name: 'News' })
+    //     .hover();
+        
+        //double click
+         await page
+        .locator('#ybar-navigation')
+        .getByRole('link', { name: 'News' })
+        .dblclick();
   });
+
+  //Mouse hover
   //     await test.step('Search with keywords', async () => {
 
   //   });
