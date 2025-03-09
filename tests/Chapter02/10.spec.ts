@@ -24,13 +24,13 @@ test('Soft Assertions', async ({ page }) => {
     await expect(page).toHaveURL(
       'https://www.youtube.com/results?search_query=playwright+by+testers+talk'
     );
-    await expect.soft(page).toHaveTitle('playwright1 by testers talk - YouTube');
+    await expect.soft(
+      page.getByRole('link', { name: 'Playwright by Testers Talk' })
+    ).toHaveCount(5);
+    await expect(page).toHaveTitle('playwright by testers talk - YouTube');
     await expect(
       page.getByRole('link', { name: 'Playwright by Testers Talk' }).first()
     ).toHaveText('Playwright by Testers Talk☑️');
-    await expect(
-      page.getByRole('link', { name: 'Playwright by Testers Talk' })
-    ).toHaveCount(5);
   });
 
   //     await test.step('Go to url', async () => {
