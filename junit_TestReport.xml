@@ -1,0 +1,58 @@
+<testsuites id="" name="" tests="2" failures="1" skipped="0" errors="0" time="14.02659">
+<testsuite name="Chapter04\04.spec.ts" timestamp="2025-03-30T21:02:43.992Z" hostname="chromium" tests="2" failures="1" skipped="0" time="20.517" errors="0">
+<testcase name="Different format reports" classname="Chapter04\04.spec.ts" time="8.34">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Chapter04-04-Different-format-reports-chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Different format reports (make it fail)" classname="Chapter04\04.spec.ts" time="12.177">
+<failure message="04.spec.ts:20:5 Different format reports (make it fail)" type="FAILURE">
+<![CDATA[  [chromium] › Chapter04\04.spec.ts:20:5 › Different format reports (make it fail) ─────────────────
+
+    Error: Timed out 5000ms waiting for expect(locator).toHaveTitle(expected)
+
+    Locator: locator(':root')
+    Expected string: "inland vs Sweden - YouTube"
+    Received string: "Finland vs Sweden - YouTube"
+    Call log:
+      - expect.toHaveTitle with timeout 5000ms
+      - waiting for locator(':root')
+        3 × locator resolved to <html lang="en" refresh="" typography="" system-icons="" darker-dark-theme="" typography-spacing="" darker-dark-theme-deprecate="">…</html>
+          - unexpected value "YouTube"
+        5 × locator resolved to <html lang="en" refresh="" typography="" system-icons="" darker-dark-theme="" typography-spacing="" darker-dark-theme-deprecate="">…</html>
+          - unexpected value "Finland vs Sweden - YouTube"
+
+
+      32 |     });
+      33 |   
+    > 34 |     await expect(page).toHaveTitle('inland vs Sweden - YouTube');
+         |                        ^
+      35 |   });
+      36 |
+        at C:\Users\afanasyev.k\source\repos\PlayWrightCourse2025\tests\Chapter04\04.spec.ts:34:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\Chapter04-04-Different-format-reports-make-it-fail--chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\Chapter04-04-Different-format-reports-make-it-fail--chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\Chapter04-04-Different-format-reports-make-it-fail--chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\Chapter04-04-Different-format-reports-make-it-fail--chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\Chapter04-04-Different-format-reports-make-it-fail--chromium\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
